@@ -43,10 +43,10 @@ pipeline {
                 branch 'master'
             }
 steps {
-input 'Deploy to
+            input 'Deploy to
 Production?' milestone(1)
 kubernetesDeploy(
-kubeconfigId: 'kubeconfig',
+            kubeconfigId: 'kubeconfig',
 configs: 'train-schedule-kube.yml',
 enableConfigSubstitution: true
             }
