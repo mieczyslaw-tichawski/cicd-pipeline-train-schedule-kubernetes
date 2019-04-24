@@ -49,7 +49,7 @@ kubernetesDeploy(
             kubeconfigId: 'kubeconfig',
 configs: 'train-schedule-kube.yml',
 enableConfigSubstitution: true
-            }
+            )
         }
     }
 }
