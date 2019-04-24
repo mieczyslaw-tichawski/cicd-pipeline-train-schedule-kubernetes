@@ -42,14 +42,14 @@ pipeline {
             when {
                 branch 'master'
             }
-steps {
-            input 'Deploy to Production?'
-milestone(1)
-kubernetesDeploy(
-            kubeconfigId: 'kubeconfig',
-configs: 'train-schedule-kube.yml',
-enableConfigSubstitution: true
-            )
+            steps {
+                input 'Deploy to Production?'
+                kubernetesDeploy(
+                    kubeconfigId: 'kubeconfig',
+                    configs: 'train-schedule-kube.yml',
+                    enableConfigSubstitution: true
+                )
+            }
         }
     }
 }
